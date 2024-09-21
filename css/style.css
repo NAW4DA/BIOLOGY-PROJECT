@@ -254,21 +254,28 @@ h2 {
 /* Медиазапросы для мобильных устройств */
 @media (max-width: 768px) {
 	.main-mnu {
-		flex-direction: column; /* Вертикальное расположение меню */
+		display: flex;
+		margin-right: 15px;
+		justify-content: center;
 	}
 
 	.main-mnu a {
-		font-size: 18px; /* Уменьшение размера шрифта для меню */
-		padding: 10px; /* Уменьшение отступов */
+		font-size: 18px;
+		padding: 10px;
+	}
+
+	.main-mnu img {
+		display: flex;
+		margin-right: 3px;
 	}
 
 	.container {
-		padding: 0 10px; /* Уменьшение отступов для контейнера */
+		padding: 0 10px;
 	}
 
 	#message {
-		font-size: 18px; /* Уменьшение размера шрифта для сообщения */
-		bottom: 150px; /* Корректировка позиции */
+		font-size: 18px;
+		bottom: 150px;
 	}
 
 	#youtubeVideo {
@@ -279,10 +286,14 @@ h2 {
 
 	.container-category,
 	.container-text {
-		padding: 15px; /* Уменьшение отступов */
+		padding: 15px;
 		position: relative;
-		left: 0; /* Перемещение контейнеров влево */
+		left: 40px; /* Перемещение контейнеров влево */
 		max-width: 90%; /* Уменьшаем максимальную ширину для мобильных */
 		height: auto; /* Авто высота для контейнеров на мобильных */
+		margin-top: 200px; /* Отступ сверху для контейнеров */
+		opacity: 1; /* Убедимся, что они видны */
+		transform: translateY(0); /* Убираем смещение по оси Y */
+
 	}
 }
