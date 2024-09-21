@@ -3,6 +3,7 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
 :root {
 	--index: calc(1vw + 1vh);
 	--swiper-theme-color: #4b4d53;
@@ -29,37 +30,35 @@ body {
 	background: url("../images/background.jpg") no-repeat center center;
 	background-size: cover;
 	filter: blur(8px);
-	z-index: -1; /* помещаем за контентом */
-	box-shadow: none;
-	border: none;
-	outline: none;
+	z-index: -1;
 }
 
 .content {
 	position: relative;
-	z-index: 1; /* помещаем над фоном */
-	height: 200vh; /* ваш контент */
-	box-shadow: none;
-	border: none;
-	outline: none;
+	z-index: 1;
+	height: 200vh;
 }
 
 .container {
 	margin: auto;
 	max-width: 840px;
+	padding: 0 20px; /* Добавлено для отступов */
 }
+
 .container-top {
 	display: flex;
 	justify-content: space-between;
 }
+
 .top-line {
 	position: absolute;
-  background-color: black;
+	background-color: black;
 	width: 100%;
 	z-index: 10;
 	padding: 1.7rem 0;
-  height: 70px;
+	height: 70px;
 }
+
 .logo {
 	border: 3px solid #E1E6F7;
 	border-radius: 10em;
@@ -69,25 +68,29 @@ body {
 	align-items: center;
 	justify-content: center;
 	opacity: .75;
-  margin-top: -17.5px;
+	margin-top: -17.5px;
 }
-.logo img{
+
+.logo img {
 	width: 37px;
 	height: auto;
 }
+
 .main-mnu {
 	display: flex;
 	font-size: 19px;
 	margin-right: -16px;
 }
+
 .main-mnu li {
 	list-style: none;
 }
 
 @font-face {
-  font-family: Klukva;
-  src: url("../fonts/klukva.otf") format("opentype");
+	font-family: Klukva;
+	src: url("../fonts/klukva.otf") format("opentype");
 }
+
 .main-mnu a {
 	color: #bbbec9;
 	padding: 12px;
@@ -95,88 +98,60 @@ body {
 	font-size: 22px;
 	text-decoration: none;
 	font-weight: 200;
-	outline: none;
 	margin: 4px;
 	cursor: pointer;
 }
+
 .main-mnu a:hover {
 	text-decoration: underline;
 }
 
-.aboutus-containter{
-  position: relative;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-#aboutus{
-  position: absolute;
-  top: 50%;
-  right: -13.5px;
-  transform: translateY(-50%);
-  width: 15px;
-  height: 15px;
-}
-
-.questions-containter{
+.aboutus-containter,
+.questions-containter,
+.contact-containter {
 	position: relative;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
-#questions{
-  position: absolute;
-  top: 50%;
-  right: -15px;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
+#aboutus,
+#questions,
+#contact {
+	position: absolute;
+	top: 50%;
+	right: -15px;
+	transform: translateY(-50%);
+	width: 20px;
+	height: 20px;
 }
 
-.contact-containter{
-	position: relative;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-#contact{
-  position: absolute;
-  top: 50%;
-  right: -14px;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-}
-
-#container-message{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-#message {
-  position: relative;
-  text-align: center;
-  max-width: 80%;
-  font-family: 'Courier New';
-  font-size: 22px;
-  font-weight: bolder;
-  color: white;
-  bottom: 270px;
-}
-
-#containter-video-youtube{
+#container-message {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-  height: 0;
+	height: 100vh;
 }
 
-#youtubeVideo{
+#message {
+	position: relative;
+	text-align: center;
+	max-width: 80%;
+	font-family: 'Courier New';
+	font-size: 22px;
+	font-weight: bolder;
+	color: white;
+	bottom: 270px;
+}
+
+#containter-video-youtube {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 0;
+}
+
+#youtubeVideo {
 	position: relative;
 	bottom: 350px;
 	border: 2.5px solid white;
@@ -186,55 +161,47 @@ body {
 
 #containter-video-youtube,
 #youtubeVideo {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
 }
 
 .green-text {
-  color: green;
+	color: green;
 }
 
 .blue-text {
-  color: rgb(0, 195, 255);
+	color: rgb(0, 195, 255);
 }
 
-@font-face{
+@font-face {
 	font-family: 'Multiround';
-  src: url("../fonts/MultiroundPro.otf");
+	src: url("../fonts/MultiroundPro.otf");
+}
+
+.container-category,
+.container-text {
+	width: 100%; /* Сделать ширину 100% для мобильных */
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 0 15px white;
+	color: black;
+	font-family: "Multiround";
+	opacity: 0;
+	transform: translateY(50px);
+	transition: opacity 0.6s ease-in, transform 0.6s ease-in;
 }
 
 .container-category {
-	width: 770px;
-	padding: 20px;
-	background-color: #fff;
-	border-radius: 10px;
-	box-shadow: 0 0 15px white;
-	color: black;
-	font-family: "Multiround";
-	position: relative;
-	left: 580px;
-	opacity: 0;
-	transform: translateY(50px);
-	transition: opacity 0.6s ease-in, transform 0.6s ease-in;
+	max-width: 770px; /* Максимальная ширина для больших экранов */
 }
 
 .container-text {
-	width: 1000px;
-	padding: 20px;
-	background-color: #fff;
-	border-radius: 10px;
-	box-shadow: 0 0 15px white;
-	color: black;
-	font-family: "Multiround";
-	position: relative;
-	left: 470px;
-	top: 80px;
-	opacity: 0;
-	transform: translateY(50px);
-	transition: opacity 0.6s ease-in, transform 0.6s ease-in;
+	max-width: 1000px; /* Максимальная ширина для больших экранов */
 }
 
-.container-text.visible {
+.container-text.visible,
+.container-category.visible {
 	transition: 1s;
 	opacity: 1;
 	transform: translateY(0);
@@ -256,16 +223,11 @@ body {
 	margin-bottom: 10px;
 }
 
-.container-category.visible {
-	transition: 1s;
-	opacity: 1;
-	transform: translateY(0);
-}
-
 h1 {
 	text-align: center;
 	font-size: 24px;
 }
+
 h2 {
 	text-align: center;
 	font-size: 20px;
@@ -277,6 +239,7 @@ h2 {
 	align-items: center;
 	margin: 10px 0;
 }
+
 .category .dot {
 	width: 20px;
 	height: 20px;
@@ -284,6 +247,33 @@ h2 {
 	border-radius: 50%;
 	margin-right: 10px;
 }
+
 .category span {
 	font-size: 16px;
+}
+
+/* Медиазапросы для мобильных устройств */
+@media (max-width: 768px) {
+	.main-mnu {
+		flex-direction: column; /* Вертикальное расположение меню */
+	}
+
+	.main-mnu a {
+		font-size: 18px; /* Уменьшение размера шрифта для меню */
+		padding: 10px; /* Уменьшение отступов */
+	}
+
+	.container {
+		padding: 0 10px; /* Уменьшение отступов для контейнера */
+	}
+
+	#message {
+		font-size: 18px; /* Уменьшение размера шрифта для сообщения */
+		bottom: 150px; /* Корректировка позиции */
+	}
+
+	.container-category,
+	.container-text {
+		padding: 15px; /* Уменьшение отступов */
+	}
 }
