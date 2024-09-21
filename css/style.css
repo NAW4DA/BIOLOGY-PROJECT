@@ -279,9 +279,11 @@ h2 {
 	}
 
 	#youtubeVideo {
-		position: relative;
+		position: relative; 
+		display: flex;
 		bottom: 300px; /* Понижаем видео на 200 пикселей для мобильных */
-		width: 90%; /* Ширина видео на мобильных */
+		width: 90%; /* Ширина видео на мобильных */ 
+		height: 300px;
 	}
 
 	.container-category,
