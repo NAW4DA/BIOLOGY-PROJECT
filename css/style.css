@@ -280,7 +280,8 @@ h2 {
 
 	#youtubeVideo {
 		position: relative; 
-		display: flex;/* Понижаем видео на 200 пикселей для мобильных */
+		display: flex;
+		top: 50px /* Понижаем видео на 50 пикселей для мобильных */
 		width: 90%; /* Ширина видео на мобильных */ 
 		height: 300px;
 	}
