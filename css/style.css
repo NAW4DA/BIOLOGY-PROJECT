@@ -30,19 +30,18 @@ body {
 	background: url("../images/background.jpg") no-repeat center center;
 	background-size: cover;
 	filter: blur(8px);
-	z-index: -1;
+	z-index: -1; /* помещаем за контентом */
 }
 
 .content {
 	position: relative;
-	z-index: 1;
-	height: 200vh;
+	z-index: 1; /* помещаем над фоном */
+	height: 200vh; /* ваш контент */
 }
 
 .container {
 	margin: auto;
 	max-width: 840px;
-	padding: 0 20px; /* Добавлено для отступов */
 }
 
 .container-top {
@@ -178,30 +177,38 @@ body {
 	src: url("../fonts/MultiroundPro.otf");
 }
 
-.container-category,
-.container-text {
-	width: 100%; /* Сделать ширину 100% для мобильных */
+.container-category {
+	width: 770px;
 	padding: 20px;
 	background-color: #fff;
 	border-radius: 10px;
 	box-shadow: 0 0 15px white;
 	color: black;
 	font-family: "Multiround";
+	position: relative;
+	left: 580px;
 	opacity: 0;
 	transform: translateY(50px);
 	transition: opacity 0.6s ease-in, transform 0.6s ease-in;
 }
 
-.container-category {
-	max-width: 770px; /* Максимальная ширина для больших экранов */
-}
-
 .container-text {
-	max-width: 1000px; /* Максимальная ширина для больших экранов */
+	width: 1000px;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 0 15px white;
+	color: black;
+	font-family: "Multiround";
+	position: relative;
+	left: 470px;
+	top: 80px;
+	opacity: 0;
+	transform: translateY(50px);
+	transition: opacity 0.6s ease-in, transform 0.6s ease-in;
 }
 
-.container-text.visible,
-.container-category.visible {
+.container-text.visible {
 	transition: 1s;
 	opacity: 1;
 	transform: translateY(0);
@@ -221,6 +228,12 @@ body {
 
 .container-text ul li {
 	margin-bottom: 10px;
+}
+
+.container-category.visible {
+	transition: 1s;
+	opacity: 1;
+	transform: translateY(0);
 }
 
 h1 {
@@ -275,5 +288,8 @@ h2 {
 	.container-category,
 	.container-text {
 		padding: 15px; /* Уменьшение отступов */
+		opacity: 1; /* Устанавливаем непрозрачность в 1 */
+		transform: translateY(0); /* Убираем смещение */
+		transition: none; /* Отключаем анимацию */
 	}
 }
