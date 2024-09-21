@@ -285,9 +285,14 @@ h2 {
 		bottom: 150px; /* Корректировка позиции */
 	}
 
+	#youtubeVideo {
+		bottom: 550px; /* Опускаем видео на 200 пикселей */
+	}
+
 	.container-category,
 	.container-text {
 		padding: 15px; /* Уменьшение отступов */
+		left: 0; /* Перемещаем влево */
 		opacity: 1; /* Устанавливаем непрозрачность в 1 */
 		transform: translateY(0); /* Убираем смещение */
 		transition: none; /* Отключаем анимацию */
