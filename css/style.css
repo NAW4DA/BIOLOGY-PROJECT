@@ -281,13 +281,14 @@ h2 {
 	#youtubeVideo {
 		position: relative; 
 		display: flex;
-		top: 20px;/* Понижаем видео на 50 пикселей для мобильных */
+		top: 10px;/* Понижаем видео на 50 пикселей для мобильных */
 		width: 90%; /* Ширина видео на мобильных */ 
 		height: 300px;
 	}
 
 	.container-category,
-	.container-text {
+	.container-text { 
+		bottom: 15px;
 		padding: 15px;
 		position: relative;
 		left: 18px; /* Перемещение контейнеров влево */
